@@ -23,7 +23,8 @@ if selected == "Home":
     st.title("Aplikasi Prediksi Penyakit Osteoporosis")
     st.write("**Oleh : Rajendra Artanto - 21.11.4236**")
 
-    st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\osteo_head.jpg')
+    #st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\osteo_head.jpg')
+    st.image('img/osteo_head.jpg', use_column_width=True)
     st.write("""
              
     Aplikasi ini bertujuan untuk membantu tenaga medis dalam mendiagnosis dan memprediksi penyakit Osteoporosis. 
@@ -35,22 +36,22 @@ if selected == "Home":
 
     st.subheader("Tentang Algoritma Prediksi")
     with st.expander("Random Forest"):
-        #st.image('asset/srandomforest.png', use_column_width=True)
-        st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\srandomforest.png')
+        st.image('img/srandomforest.png', use_column_width=True)
+        #st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\srandomforest.png')
         st.write("Random forest adalah algoritma yang menggabungkan hasil (output) dari beberapa decision tree untuk mencapai satu hasil yang lebih akurat. Random forest membutuhkan gabungan beberapa decision tree untuk memprediksi hasil yang akurat. ")
         st.write("Konsep sederhana dari random forest adalah beberapa decision tree yang tidak berkorelasi akan bekerja lebih baik sebagai kelompok dibandingkan individu. Saat menggunakan random forest sebagai pengklasifikasi, satu decision tree menyumbang satu suara. Setiap decision tree bisa menghasilkan jawaban yang sama atau berbeda satu sama lain. ")
         st.write("Misalnya decision tree A, B, E dan F memprediksi hasil 1. Sementara decision tree C dan D memprediksi hasil 0. Karena ada banyaknya alternatif jawaban dalam decision tree dan kemungkinan bias yang tinggi, random forest mengambil prediksi hasil dari beberapa decision tree berdasarkan suara mayoritas dan memprediksi hasil yang lebih akurat.")
         st.write("Semakin banyak hasil decision tree yang diambil, semakin tinggi akurasi terutama ketika masing-masing pohon tidak berkorelasi satu sama lain.  ")
 
     with st.expander("Support Vector Machine"):
-        #st.image('asset/knn.jpg',use_column_width=True)
-        st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\svm.jpg')
+        st.image('img/svm.jpg',use_column_width=True)
+        #st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\svm.jpg')
         st.write("Support Vector Machine (SVM) adalah algoritma machine learning yang digunakan untuk tugas klasifikasi dan regresi, namun paling dikenal dalam klasifikasi. SVM bekerja dengan mencari hyperplane terbaik yang memisahkan dua kelas dalam dataset dengan margin yang maksimal. Titik-titik data yang paling dekat dengan hyperplane disebut support vectors, yang menentukan posisi hyperplane tersebut.")
         st.write("SVM berfokus pada memaksimalkan margin, yaitu jarak antara hyperplane dengan support vectors dari masing-masing kelas, untuk menghasilkan model yang lebih generalis dalam menghadapi data baru. Jika data tidak dapat dipisahkan secara linier, SVM menggunakan metode kernel trick untuk memetakan data ke ruang berdimensi lebih tinggi sehingga dapat dipisahkan. Algoritma ini sangat efektif dalam ruang dimensi tinggi dan mampu menangani masalah klasifikasi non-linier dengan baik. ")
 
     with st.expander("Gradient Boosting"):
-        #st.image('asset/gradientboosting.png',use_column_width=True)
-        st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\gradientboosting.png')
+        st.image('img/gradientboosting.png',use_column_width=True)
+        #st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\gradientboosting.png')
         st.write("Gradient Boosting adalah salah satu metode Machine Learning yang berfokus pada perbaikan kinerja model melalui peningkatan performa model sebelumnya. Algoritma ini menggunakan pendekatan boosting yang melibatkan peningkatan performa model dengan memanfaatkan informasi dari model-model sebelumnya.")
         st.write("Gradient Boosting merupakan algoritma machine learning yang menggabungkan beberapa model kecil menjadi satu model yang lebih kuat dan lebih baik dalam memprediksi data. Algoritma ini bekerja dengan mengukur eror dari model sebelumnya dan menggunakan informasi tersebut untuk memperbaiki performa model berikutnya.")
         st.write("Gradient Boosting terkenal akan kemampuannya untuk menangani data yang kompleks dan memberikan prediksi yang akurat dengan menggabungkan kekuatan dari beberapa model lemah untuk membentuk model yang kuat. Teknik ini juga fleksibel dan dapat digunakan untuk berbagai jenis data, baik regresi maupun klasifikasi.")
