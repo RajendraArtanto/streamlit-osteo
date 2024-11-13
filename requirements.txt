@@ -1,6 +1,7 @@
 numpy
 pandas
 streamlit
+streamlit-option-menu
 pip
 scikit-learn
 catboost
