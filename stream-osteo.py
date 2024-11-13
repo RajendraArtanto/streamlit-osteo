@@ -24,7 +24,7 @@ if selected == "Home":
     st.write("**Oleh : Rajendra Artanto - 21.11.4236**")
 
     #st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\osteo_head.jpg')
-    st.image('img/osteo_head.jpg', use_column_width=True)
+    st.image('img/osteo_head.jpg', use_container_width=True)
     st.write("""
              
     Aplikasi ini bertujuan untuk membantu tenaga medis dalam mendiagnosis dan memprediksi penyakit Osteoporosis. 
@@ -36,7 +36,7 @@ if selected == "Home":
 
     st.subheader("Tentang Algoritma Prediksi")
     with st.expander("Random Forest"):
-        st.image('img/srandomforest.png', use_column_width=True)
+        st.image('img/srandomforest.png', use_container_width=True)
         #st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\srandomforest.png')
         st.write("Random forest adalah algoritma yang menggabungkan hasil (output) dari beberapa decision tree untuk mencapai satu hasil yang lebih akurat. Random forest membutuhkan gabungan beberapa decision tree untuk memprediksi hasil yang akurat. ")
         st.write("Konsep sederhana dari random forest adalah beberapa decision tree yang tidak berkorelasi akan bekerja lebih baik sebagai kelompok dibandingkan individu. Saat menggunakan random forest sebagai pengklasifikasi, satu decision tree menyumbang satu suara. Setiap decision tree bisa menghasilkan jawaban yang sama atau berbeda satu sama lain. ")
@@ -44,13 +44,13 @@ if selected == "Home":
         st.write("Semakin banyak hasil decision tree yang diambil, semakin tinggi akurasi terutama ketika masing-masing pohon tidak berkorelasi satu sama lain.  ")
 
     with st.expander("Support Vector Machine"):
-        st.image('img/svm.jpg',use_column_width=True)
+        st.image('img/svm.jpg',use_container_width=True)
         #st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\svm.jpg')
         st.write("Support Vector Machine (SVM) adalah algoritma machine learning yang digunakan untuk tugas klasifikasi dan regresi, namun paling dikenal dalam klasifikasi. SVM bekerja dengan mencari hyperplane terbaik yang memisahkan dua kelas dalam dataset dengan margin yang maksimal. Titik-titik data yang paling dekat dengan hyperplane disebut support vectors, yang menentukan posisi hyperplane tersebut.")
         st.write("SVM berfokus pada memaksimalkan margin, yaitu jarak antara hyperplane dengan support vectors dari masing-masing kelas, untuk menghasilkan model yang lebih generalis dalam menghadapi data baru. Jika data tidak dapat dipisahkan secara linier, SVM menggunakan metode kernel trick untuk memetakan data ke ruang berdimensi lebih tinggi sehingga dapat dipisahkan. Algoritma ini sangat efektif dalam ruang dimensi tinggi dan mampu menangani masalah klasifikasi non-linier dengan baik. ")
 
     with st.expander("Gradient Boosting"):
-        st.image('img/gradientboosting.png',use_column_width=True)
+        st.image('img/gradientboosting.png',use_container_width=True)
         #st.image('D:\KULIAH\Osteoporosis\Persiapan Deploy\IMG\gradientboosting.png')
         st.write("Gradient Boosting adalah salah satu metode Machine Learning yang berfokus pada perbaikan kinerja model melalui peningkatan performa model sebelumnya. Algoritma ini menggunakan pendekatan boosting yang melibatkan peningkatan performa model dengan memanfaatkan informasi dari model-model sebelumnya.")
         st.write("Gradient Boosting merupakan algoritma machine learning yang menggabungkan beberapa model kecil menjadi satu model yang lebih kuat dan lebih baik dalam memprediksi data. Algoritma ini bekerja dengan mengukur eror dari model sebelumnya dan menggunakan informasi tersebut untuk memperbaiki performa model berikutnya.")
@@ -136,24 +136,11 @@ elif selected == "Prediksi":
         st.info(probability)
 
 elif selected == "Visualisasi":
-    #st.subheader('Visualisasi Dataset Osteoporosis Pasca Pemrosesan')
 
-    #st.write("Dataset yang digunakan yaitu dataset pasien Hepatitis C yang diambil dari situs Kaggle.com dan telah dilakukan proses EDA. EDA, atau Exploratory Data Analysis, adalah proses analisis awal data yang bertujuan untuk memahami karakteristik, struktur, dan komponen penting dari dataset sebelum melakukan analisis statistik atau pemodelan prediktif lebih lanjut.")
-    #st.write("Klik link dibawah ini untuk mengakses dataset")
-    #st.write("[Dataset asli](https://www.kaggle.com/datasets/fedesoriano/hepatitis-c-dataset) | [Dataset + EDA](https://drive.google.com/file/d/1dErBu_QUdeIBK9bQNUYa6zZvGZ2-_Yat/view?usp=drive_link)")
-    
     df_visual = pd.read_excel('osteocross.xlsx')
-
-    # Tampilkan beberapa data untuk referensi
-    #st.write("Data Awal:")
-    #st.dataframe(df_visual.head())
-
-    #st.write("Menampilkan dataset setelah pemrosesan:")
-    #st.write(df_visual.head())  # Menampilkan beberapa data
 
     st.header("Visualisasi Cross Tabulation Masing-Masing Fitur dengan Diagram Batang")
     st.write("Visualisasi menggunakan dataset yang telah melalui tahap pra-pemrosesan data yang meliputi handling null values menggunakan teknik imputasi data ")
-
 
     # List semua fitur kecuali kolom age
     columns_to_visualize = df_visual.columns[df_visual.columns != 'Age']
